@@ -1,0 +1,4 @@
+-- database: ./blog.db
+
+SELECT * FROM articles
+ORDER BY `text` ASC;

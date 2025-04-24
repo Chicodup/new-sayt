@@ -1,0 +1,33 @@
+-- database: c:\Users\Улюблений комп'ютер\Downloads\new sayt\blog.db
+
+CREATE TABLE articles (
+    id  INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    text TEXT,
+    author TEXT NOT NULL,
+    image TEXT,
+    
+    category_id INTEGER REFERENCES categories(id)       
+);
+
+CREATE TABLE categories (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL
+);
+
+
+CREATE TABLE comments(
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    author TEXT NOT NULL,
+    text TEXT,
+    created TEXT DEFAULT CURRENT_TIMESTAMP,
+    article_id INTEGER REFERENCES articles(id)
+);
+
+
+
+
+DROP TABLE comments;
+
+
+

@@ -1,0 +1,28 @@
+body{
+    background: rgb(32, 32, 32);
+    color: white;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+
+.link-btn {
+    background: linear-gradient(45deg, #3b0099, #8000ff);
+    color: white;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    margin: 50px;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3); /* Тінь навколо кнопки */
+    text-shadow: 1px 1px 3px rgba(0, 217, 255, 0.5); /* Тінь для тексту */
+}
+
+.link-btn:hover {
+    background: linear-gradient(45deg, #ffe600, #ff9900);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* Більш інтенсивна тінь при наведенні */
+}
+.btn_info{
+    background-color: #00ff95;
+}
+nav{background: #ff9100;}
