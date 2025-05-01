@@ -25,39 +25,34 @@
 
 </head>
 <body data-bs-theme="dark">
+  <video autoplay muted loop class="video-bg">
+    <source src="{{ url_for('static', filename='img/ONILINK.mp4') }}" type="video/mp4">
+    Ваш браузер не підтримує відео.
+  </video> 
     <nav data-bs-theme="light" class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Sigmoblock</a>
+          <a class="navbar-brand" href="#">Blog about RG</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Головна</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="https://www.bing.com/videos/riverview/relatedvideo?q=rickroll+youtube+link&refig=32DCC239A63E4C6AA90BB70B68A49BE8&pc=U531&ucpdpc=UCPD&pq=rickroll+you&pqlth=12&assgl=21&sgcn=rickroll+youtube+link&qs=UT&sgtpv=UT&smvpcn=0&swbcn=12&sctcn=0&sc=12-12&sp=2&ghc=1&cvid=32DCC239A63E4C6AA90BB70B68A49BE8&clckatsg=1&hsmssg=0&ru=%2fsearch%3fq%3drickroll%2byoutube%2blink%26form%3dANNTH1%26refig%3d32DCC239A63E4C6AA90BB70B68A49BE8%26pc%3dU531%26ucpdpc%3dUCPD%26pq%3drickroll%2byou%26pqlth%3d12%26assgl%3d21%26sgcn%3drickroll%2byoutube%2blink%26qs%3dUT%26sgtpv%3dUT%26smvpcn%3d0%26swbcn%3d12%26sctcn%3d0%26sc%3d12-12%26sp%3d2%26ghc%3d1%26cvid%3d32DCC239A63E4C6AA90BB70B68A49BE8%26clckatsg%3d1%26hsmssg%3d0&mmscn=vwrc&mid=172DC0A2FDF42E2386D5172DC0A2FDF42E2386D5&FORM=WRVORC&ntb=1&msockid=584020e3212611f09d58bc089f8652e3">Link</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <a class="nav-link disabled" aria-disabled="true"></a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-dark" type="submit">Пошук</button>
-            </form>
+            <form action="{{url_for('search')}}" class="d-flex" role="search">
+            <input name="query" class="form-control me-2" id="search" placeholder="Пошук">
           </div>
         </div>
       </nav>
@@ -65,12 +60,12 @@
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              щось буде
+              Контакти
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>Привіт</strong> ГО: +380630412998
+              <strong>Привіт</strong> Контакти: +380630412998
             </div>
           </div>
         </div>

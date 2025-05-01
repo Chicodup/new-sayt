@@ -6,6 +6,7 @@ CREATE TABLE articles (
     text TEXT,
     author TEXT NOT NULL,
     image TEXT,
+    price TEXT,
     
     category_id INTEGER REFERENCES categories(id)       
 );

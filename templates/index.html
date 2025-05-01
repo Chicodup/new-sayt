@@ -1,17 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
-        <h1>Sigmoblog</h1>
+        <h1>Блог про ігри від Rockstar Games</h1>
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="{{ url_for('static', filename='img/desola-lanre-ologun-USp4Gzr-Hdw-unsplash.jpg')}}" class="d-block w-100" alt="...">
+              <img src="{{ url_for('static', filename='img/16549749_e927cf18-9fea-4f1d-9f15-b77bbdb7d359_650_917.jpg')}}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="{{ url_for('static', filename='img/christina-wocintechchat-com-QCgAK6uHZm8-unsplash.jpg')}}" class="d-block w-100" alt="...">
+              <img src="{{ url_for('static', filename='img/91EuEP0xd-L.jpg')}}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="{{ url_for('static', filename='img/christina-wocintechchat-com-eAXpbb4vzKU-unsplash.jpg')}}" class="d-block w-100" alt="...">
+              <img src="{{ url_for('static', filename='img/Red_Dead_Redemption_II_HQ.jpg')}}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='img/depositphotos_729794330-stock-photo-kyiv-ukraine-june-2024-grand.jpg')}}" class="d-block w-100" alt="...">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -23,21 +26,7 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Центральний Заголовок</title>
-          <style>
-            .center-title {
-              text-align: center;
-              margin-top: 50px;
-              font-family: Arial, sans-serif;
-            }
-          </style>
-        </head>
-        <body>
-          <h1 class="center-title">Статті:</h1>
-        </body>
+          <h1 class="center-title">Тут статті про ігри цієї компанії:</h1>
         <div class="articles">
         {%  for article in articles %}
 

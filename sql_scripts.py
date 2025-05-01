@@ -17,3 +17,12 @@ def get_article(article_id):
     articles = cursor.fetchone()
     conn.close()
     return articles
+
+def search_articles(search_query):
+    conn = sqlite3.connect('blog.db')
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM articles WHERE title LIKE ? OR text LIKE ?", ('%' + search_query + '%', '%' + search_query + '%'))
+    articles = cursor.fetchall()
+    conn.close()
+    return articles

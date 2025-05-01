@@ -25,4 +25,15 @@ body{
 .btn_info{
     background-color: #00ff95;
 }
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
 nav{background: #ff9100;}

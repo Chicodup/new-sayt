@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+        <h1>Блог про ігри від Rockstar Games</h1>
+          <h1 class="center-title">Тут статті за вашим пошуком:</h1>
+        <div class="articles">
+        {%  for article in articles %}
+
+        <div class="card" style="width: 50rem;">
+          <img src="{{ url_for('static', filename=article[4])}} " class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{article[3]}}</h5>
+            <p class="card-text">{{article[2]}}</p>
+          </div>
+          </ul>
+          <div class="card-body">
+            <a href="{{url_for('article_page',article_id=article[0]) }}" class="card-link">Сторінка статті</a>
+            <a href="https://www.bing.com/videos/riverview/relatedvideo?q=rickroll+youtube+link&refig=32DCC239A63E4C6AA90BB70B68A49BE8&pc=U531&ucpdpc=UCPD&pq=rickroll+you&pqlth=12&assgl=21&sgcn=rickroll+youtube+link&qs=UT&sgtpv=UT&smvpcn=0&swbcn=12&sctcn=0&sc=12-12&sp=2&ghc=1&cvid=32DCC239A63E4C6AA90BB70B68A49BE8&clckatsg=1&hsmssg=0&ru=%2fsearch%3fq%3drickroll%2byoutube%2blink%26form%3dANNTH1%26refig%3d32DCC239A63E4C6AA90BB70B68A49BE8%26pc%3dU531%26ucpdpc%3dUCPD%26pq%3drickroll%2byou%26pqlth%3d12%26assgl%3d21%26sgcn%3drickroll%2byoutube%2blink%26qs%3dUT%26sgtpv%3dUT%26smvpcn%3d0%26swbcn%3d12%26sctcn%3d0%26sc%3d12-12%26sp%3d2%26ghc%3d1%26cvid%3d32DCC239A63E4C6AA90BB70B68A49BE8%26clckatsg%3d1%26hsmssg%3d0&mmscn=vwrc&mid=172DC0A2FDF42E2386D5172DC0A2FDF42E2386D5&FORM=WRVORC&ntb=1&msockid=584020e3212611f09d58bc089f8652e3" class="card-link">Інше посилання</a>
+          </div>
+        </div>
+        {% endfor %}
+        </div>
+        {% endblock content %}
